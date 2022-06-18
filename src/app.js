@@ -67,7 +67,7 @@ app.use(session({
     secret: 'secret',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb+srv://user:user@cluster0.96jxps0.mongodb.net/test?retryWrites=true&w=majority' }),
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://shreyas05:Shreyas123@cluster0.96jxps0.mongodb.net/fashionRegister?retryWrites=true&w=majority' }),
     cookie: { maxAge: 180 * 60 * 1000 },
 }));
 
