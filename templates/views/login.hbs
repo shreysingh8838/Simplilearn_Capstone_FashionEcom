@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <title>Login</title>
+</head>
+
+<body>
+  {{#if hasErrors}}
+                <div class="alert alert-danger">
+                    {{#each messages}}
+                    <p>{{this}}</p>
+                    {{/each}}
+                </div>
+                {{/if}}
+  
+    <form class="login" action="/login" method="post">
+    
+  <input type="email" placeholder="Username"name="email">
+  <input type="password" placeholder="Password"  name="password">
+  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+  <button type="submit">Login</button>
+  <p>Don't have an Account? <a href="/register" style="color:black;font-size:medium">Sign up instead</a></p>
+</form>
+
+<ul class="wrapper">
+  <li class="icon facebook">  
+    <span class="tooltip">Admin Login</span>
+    <span><i id="admin"class="fas fa-user-cog" onclick=redirect()></i></span>
+  </li>
+</ul>
+
+<script>
+  function redirect(){
+    var admin ="simplilearn"  
+    var password = "simplilearn@123"
+    var userN = prompt("Please Enter Your Name","Name");
+    var passW = prompt('Please Enter Your Password',"Password");
+    if(userN == admin && passW == password){
+      window.location.href = "/admin.hbs";
+    }
+    else{
+      alert("Invalid Credentials");
+    }
+  }
+</script>
+</body>
+
+</html>

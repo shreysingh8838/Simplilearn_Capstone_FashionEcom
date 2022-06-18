@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Product List</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tablecss.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="image/logo.png" width="50" class="logo" alt=""></a>
+        <div>
+        <ul id="navbar">
+            <li><a  href="admin.hbs">Customer's Order</a></li>
+            <li><a  href="newarrival.hbs">Add product</a></li>
+            <li><a class="active" href="allproducts">See listed products</a></li>
+            <li><a href="shop.hbs">Shop(Client)</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {{!-- <li><li>{{>usermanage}}</li></li> --}}
+            {{!-- <li id="lg-bag">
+                <a href="/shopping-cart.hbs">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">{{session.cart.totalQty}}</span>
+                </a>
+            </li> --}}
+            <a href="#" id="close"><i class="fas fa-times"></i></a>
+        </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+   
+<div class="table-wrapper">  
+     <h3><a class="btn btn-secondary" href="/newarrival.hbs"><i class="fa fa-plus"></i>Create New</a>All Products List</h3>  
+    <table class="fl-table" border="3" style="align=" center"">
+        <thead>
+
+            <tr>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Update OR Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list}}
+            <tr>
+                <td>{{this.proCompany}}</td>
+                <td>{{this.proTitle}}</td>
+                <td>{{this.proPrice}}</td>
+                <td><img src="image/p1.jpg" alt="" height=100 width=100 /></td>
+                <td style="
+  display:inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 13ch;">{{this.proDes}}</td>
+                <td>
+                    <a href="update/{{this._id}}"><i class="fas fa-edit fa-2x normal" aria-hidden="true"></i></a>
+                    <a href="delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');" ><i class="fas fa-ban fa-2x" aria-hidden="true"></i></a>
+
+                </td>
+                
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

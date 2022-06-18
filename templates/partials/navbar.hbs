@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img id="header-image" src="image/logo.png" width="50" class="logo" alt=""></a>
+        <div>
+        <ul id="navbar">
+            <li><a  href="index.hbs">Home</a></li>
+            <li><a class="active" href="shop.hbs">Shop</a></li>
+            <li><a href="about.hbs">About</a></li>
+            <li><a href="contact.hbs">Contact</a></li>
+            <li><li>{{>usermanage}}</li></li>
+            <li id="lg-bag">
+                <a href="/shopping-cart.hbs">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">{{session.cart.totalQty}}</span>
+                </a>
+            
+            </li>
+            <a href="#" id="close"><i class="fas fa-times"></i></a>
+        </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    
+</body>
+</html>

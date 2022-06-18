@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="image/logo.png" width="50" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.hbs">Home</a></li>
+                <li><a href="shop.hbs">Shop</a></li>
+                <li><a class="active" href="#">Blog</a></li>
+                <li><a href="about.hbs">About</a></li>
+                <li><a href="contact.hbs">Contact</a></li>
+                <li><li>{{>usermanage}}</li></li>
+                <li id="lg-bag"><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <section id="page-header" class="blog-header">
+
+        <h2>#readmore</h2>
+        <p>Real all case studies about our products! </p>
+
+    </section>
+
+    <section id="blog">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="/image/blog1.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Best Gifts For Teenagers According To Ankur Warikoo</h4>
+                <p>Ankur is an Indian online entrepreneur and one of the country’s top content providers. He is also a bestselling author and an instructor who teaches online. Warikoo enjoys mentoring startups and acting as an angel investor in his leisure time.</p>
+                <a href="https://hoppingo.com/best-gifts-for-teenagers/" target="_blank">CONTINUE READING</a>
+            </div>
+            <h1>13/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="/image/blog5.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Lifestyle Influencer Zahra Jani Top Picks from Amazon</h4>
+                <p>For those of you who don’t know Zahra Jani, she is a parenting & lifestyle influencer. Her Instagram page @beingmom_andbeyond is about womanhood, motherhood, modern parenting, and her passion for fitness. Her journey with the page began in the year 2019. Today she has an active & organic Instagram Family of 40,000 plus and they all look up to her active lifestyle.</p>
+                <a href="https://hoppingo.com/zahra-jani-top-picks/"target="_blank">CONTINUE READING</a>
+            </div>
+            <h1>13/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="/image/blog4.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Top 17 Lohri Outfit Ideas For Women</h4>
+                <p>All of us have mutually experienced two things i.e; the festive buzz and the inability to find the perfect festive attire. Especially when a festival holds a big significance such as Lohri. </p>
+                <a href="https://hoppingo.com/lohri-outfit-ideas/"target="_blank">CONTINUE READING</a>
+            </div>
+            <h1>13/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="/image/blog3.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Men’s Diwali Wear According To Latest Fashion Styles – 2022</h4>
+                <p>he men’s ethnic wear segment has come up in a big way in recent years. The traditional Indian dressing for both men and women at festivals, weddings, and other occasions has become quite the trend. </p>
+                <a href="https://hoppingo.com/mens-diwali-wear/"target="_blank">CONTINUE READING</a>
+            </div>
+            <h1>13/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="/image/blog2.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>7 Brands Of Best Loafers For Women On Amazon</h4>
+                <p>Looking for Best Loafers For Women? If you are a Loafer fan, then you know that Loafers have seen a surge in popularity. Loafers For Women from Amazon offers all the variety from different brands at the best prices.</p>
+                <a href="https://hoppingo.com/best-loafers-for-women/"target="_blank">CONTINUE READING</a>
+            </div>
+            <h1>13/01</h1>
+        </div>
+    </section>
+
+    <section id="pagination" class="sectionn-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fas fa-long-arrow-alt-right"> </i></a>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1 ">
+        <div class="newstext">
+            <h4>Sign Up for Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <script src="models/script.js"></script>
+    {{>footer}}
+</body>
+
+</html>
